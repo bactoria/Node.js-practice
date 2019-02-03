@@ -1,4 +1,4 @@
-// promise (ES2015)
+// ### promise (ES2015)
 const promiseObj = new Promise((res, rej) => {
     const a = 1;
     const b = 2;
@@ -14,12 +14,16 @@ const promiseObj = new Promise((res, rej) => {
 promiseObj
     .then(x => console.log(x))
     .catch(x => console.log(x));
-console.log("Done"); //위의 로그보다 먼저 찍힘.
+console.log("Done");
+
+/* 결과
+* Done
+* fail : 1, 2
+* */
 
 
-// async/await (ES6)
-// 장점 : 순서 보장
-// 단점 : try-catch 남발
+
+// ### async, await (ES6)
 
 const func = async () => {
     try {
@@ -32,7 +36,13 @@ const func = async () => {
    console.log("Done");
 }
 
-func()
+/* 결과
+* fail : 1, 2
+* Done
+* */
+// 동기식처럼 순서가 보장된다. 허나, 에러를 try-catch로 제어해야함. 코드가 지저분해질 수 있음.
 
 
-// async/await (ES2017)
+
+
+// ### async/await (ES2017)
