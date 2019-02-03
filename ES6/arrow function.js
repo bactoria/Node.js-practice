@@ -1,17 +1,8 @@
-function add1(x, y) {
-    return x + y;
-}
-
-const add2 = (x, y) => {
-    return x + y;
-}
-
+function add1(x, y) {return x + y;}
+const add2 = (x, y) => {return x + y;}
 const add3 = (x, y) => x + y;
 
 
-// this
-
-const userName = "Junoh"
 
 const user1 = {
     name: 'junoh',
